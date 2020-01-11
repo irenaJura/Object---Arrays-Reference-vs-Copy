@@ -5,7 +5,7 @@
   <title>JS Reference VS Copy</title>
 </head>
 <body>
-
+  <p>See the console to see the results &#9997;</p>
   <script>
     // start with strings, numbers and booleans
     let age = 100;
@@ -79,8 +79,9 @@
     const cap2 = Object.assign({}, person, { id: 13, age: 50 });
     console.log(person, cap2);
 
-    // We will hopefully soon see the object ...spread
-    const cap3 = {...person};
+    // the object ...spread method
+    let cap3 = {...person, new: 'stuff'};
+    console.log(person, cap3);
 
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
 
